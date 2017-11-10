@@ -17,7 +17,7 @@ This plugin provides a simple shortcode where you pass 3 parameters:
 
 -`videoId`: The youtube Video ID.
 
-So the ID is NpEaa2P7qZI on this URL: https://www.youtube.com/embed/**NpEaa2P7qZI**?enablejsapi=1
+So the ID is NpEaa2P7qZI on this URL: https://www.youtube.com/embed/NpEaa2P7qZI?enablejsapi=1
 
 -`mauticUrl`: Full URL of your mautic
 
