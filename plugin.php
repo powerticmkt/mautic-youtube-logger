@@ -20,7 +20,7 @@ function mautic_youtube( $atts ) {
 		'mautic_youtube'
 	);
 
-	$res = <<<EOT
+$res = <<<EOT
 	<iframe id="player" height="{$atts['height']}" src="https://www.youtube.com/embed/{$atts['videoId']}?enablejsapi=1"></iframe>
 	<script>
 	  var player;
