@@ -1,16 +1,8 @@
-<!--
-  Este script manipula o player do youtube e envia ao mautic os plays e tambem
-  informa se o lead assistiu o video até o fim
-
-  para utilizar basta trocar o ID do vídeo no iframe abaixo: (Exemplo: NpEaa2P7qZI)
-
-  e depois inserir o endereço do seu mautic na variável mauticUrl.
--->
-<iframe id="player" height="500px" src="https://www.youtube.com/embed/NpEaa2P7qZI?enablejsapi=1"></iframe>
+?>
+<iframe id="player" height="<?php echo $atts["height"]; ?>" src="https://www.youtube.com/embed/<?php $atts["videoId"]; ?>?enablejsapi=1"></iframe>
 <script>
   var player;
-  // coloque aqui o URL do seu Mautic
-  var mauticUrl = "https://mkt.teste.com";
+  var mauticUrl = $atts["mauticUrlheight"];
   function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
       events: {
@@ -38,3 +30,4 @@
   }
 </script>
 <script src="https://www.youtube.com/iframe_api"></script>
+<?php
