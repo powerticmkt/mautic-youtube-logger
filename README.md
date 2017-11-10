@@ -23,7 +23,7 @@ So the ID is NpEaa2P7qZI on this URL: https://www.youtube.com/embed/**NpEaa2P7qZ
 
 -`height`: Height in pixels of Youtube Player
 
-So you can use this shortcode this way:
+So you can use this shortcode:
 
 `[mautic_youtube videoId="NpEaa2P7qZI" mauticUrl="https://mkt.powertic.com"]`
 
