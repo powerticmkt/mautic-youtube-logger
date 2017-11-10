@@ -1,4 +1,4 @@
-?>
+
 <iframe id="player" height="<?php echo $atts["height"]; ?>" src="https://www.youtube.com/embed/<?php $atts["videoId"]; ?>?enablejsapi=1"></iframe>
 <script>
   var player;

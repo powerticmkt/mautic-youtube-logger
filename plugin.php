@@ -20,7 +20,9 @@ function mautic_youtube( $atts ) {
 		'mautic_youtube'
 	);
 
-	require("iframe.php");
+	$res = include 'iframe.php';
+
+	return $res;
 
 }
 add_shortcode( 'mautic_youtube', 'mautic_youtube' );
