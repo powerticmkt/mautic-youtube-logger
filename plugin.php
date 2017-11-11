@@ -2,7 +2,7 @@
 /*
 * Plugin Name: Mautic Youtube Logger
 * Description: Register Youtube plays on Mautic Timeline
-* Version: 1.0.4
+* Version: 1.0.5
 * Author: Powertic
 * Author URI: https://powertic.com
 */
@@ -22,7 +22,7 @@ $res = <<<EOT
 	<iframe id="player" height="{$height}" src="https://www.youtube.com/embed/{$videoid}?enablejsapi=1"></iframe>
 	<script>
 	  var player;
-	  var mauticUrl = {$mautic};
+	  var mauticUrl = "{$mautic}";
 	  function onYouTubeIframeAPIReady() {
 	    player = new YT.Player('player', {
 	      events: {
