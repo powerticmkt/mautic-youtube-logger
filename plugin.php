@@ -12,9 +12,9 @@ function mautic_youtube( $atts ) {
 	// Attributes
 	$atts = shortcode_atts(
 		array(
-			'videoId' => 'NpEaa2P7qZI',
-			'mauticUrl' => 'https://mautic.org',
-			'height' => '500',
+			'videoId' => '',
+			'mauticUrl' => '',
+			'height' => '',
 		),
 		$atts,
 		'mautic_youtube'
