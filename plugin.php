@@ -2,7 +2,7 @@
 /*
 * Plugin Name: Mautic Youtube Logger
 * Description: Register Youtube plays on Mautic Timeline
-* Version: 1.0.0
+* Version: 1.0.2
 * Author: Powertic
 * Author URI: https://powertic.com
 */
@@ -58,3 +58,15 @@ EOT;
 
 }
 add_shortcode( 'mautic_youtube', 'mautic_youtube' );
+
+
+// Autoupdater
+require 'plugin-update-checker/plugin-update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/powerticmkt/mautic-youtube-logger/',
+	__FILE__,
+	'mautic-youtube-logger'
+);
+
+//Optional: Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('master');
