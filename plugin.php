@@ -10,7 +10,7 @@
 function mautic_youtube( $atts ) {
 
 	// Attributes
-	$atts = shortcode_atts(
+	$att = shortcode_atts(
 		array(
 			'videoId' => '',
 			'mauticUrl' => '',
@@ -21,10 +21,10 @@ function mautic_youtube( $atts ) {
 	);
 
 $res = <<<EOT
-	<iframe id="player" height="{$atts['height']}" src="https://www.youtube.com/embed/{$atts['videoId']}?enablejsapi=1"></iframe>
+	<iframe id="player" height="{$att['height']}" src="https://www.youtube.com/embed/{$att['videoId']}?enablejsapi=1"></iframe>
 	<script>
 	  var player;
-	  var mauticUrl = {$atts['mauticUrl']};
+	  var mauticUrl = {$att['mauticUrl']};
 	  function onYouTubeIframeAPIReady() {
 	    player = new YT.Player('player', {
 	      events: {
