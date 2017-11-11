@@ -2,29 +2,27 @@
 /*
 * Plugin Name: Mautic Youtube Logger
 * Description: Register Youtube plays on Mautic Timeline
-* Version: 1.0.3
+* Version: 1.0.4
 * Author: Powertic
 * Author URI: https://powertic.com
 */
 
 function mautic_youtube( $atts ) {
 
-	// Attributes
-	$att = shortcode_atts(
-		array(
-			'videoId' => '',
-			'mauticUrl' => '',
-			'height' => '',
-		),
-		$atts,
-		'mautic_youtube'
-	);
+	$mautic = $atts['mauticurl'];
+	$videoid = $atts['videoid'];
+
+	$atts = shortcode_atts( array(
+	  'height' => '500px',
+	), $atts );
+
+	$height = $atts['height'];
 
 $res = <<<EOT
-	<iframe id="player" height="{$att['height']}" src="https://www.youtube.com/embed/{$att['videoId']}?enablejsapi=1"></iframe>
+	<iframe id="player" height="{$height}" src="https://www.youtube.com/embed/{$videoid}?enablejsapi=1"></iframe>
 	<script>
 	  var player;
-	  var mauticUrl = {$att['mauticUrl']};
+	  var mauticUrl = {$mautic};
 	  function onYouTubeIframeAPIReady() {
 	    player = new YT.Player('player', {
 	      events: {
