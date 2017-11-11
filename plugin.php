@@ -2,7 +2,7 @@
 /*
 * Plugin Name: Mautic Youtube Logger
 * Description: Register Youtube plays on Mautic Timeline
-* Version: 1.0.2
+* Version: 1.0.3
 * Author: Powertic
 * Author URI: https://powertic.com
 */
